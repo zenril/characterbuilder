@@ -1,0 +1,64 @@
+.c-stat {
+    padding: 5px;
+    margin: 5px;
+    width: 120px;
+
+    border: 1px solid black;
+}
+
+.c-stat-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.c-stat-row_label{
+    min-width: 40px;
+}
+
+
+
+.c-stat-row_input{
+    input {
+        padding:5px 0px 5px 10px;
+        font-size: 16px;
+        border:1px solid #0a508c;
+        border-radius: 4px;
+        margin:2px 0;
+        width:100%;
+    }
+}
+
+.c-stat-row--misc{
+    justify-content: flex-end;
+    .c-stat-row_input{
+        max-width: 50px;
+        input{
+            font-size: 12px;
+        }
+    }
+}
+
+.c-block-preview {
+    p, pre {
+        margin: 2px;
+    }
+}
+
+
+.c-stat-mod {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+@media only screen and (max-width:720px) { 
+	/* CSS rules here */
+}
+
+@media only screen and (max-width:1120px) { 
+	/* CSS rules here */
+}
+
+@media only screen and (max-width:1600px) { 
+	/* CSS rules here */
+}
