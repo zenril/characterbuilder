@@ -13,16 +13,15 @@ class AppSettings
         this.filename = 'appdata.json';
     }
 
-    load(cb){
+    load(cb, fail){
         var _this = this;
         this.settings = null;
         this.tries = 0;
         this.addScript(api => {
             
             api.load('client:auth', _ => {
-                this.settingsInit(cb);
+                this.settingsInit(cb, fail);
             });
-        
         });
     }
 
@@ -33,13 +32,14 @@ class AppSettings
         this.retry();
     }
     
-    settingsInit(cb) {
+    settingsInit(cb, fail) {
         this.tries++;
         this.gdad = gdad(this.filename, config.gdriveAuthKey);
         this.gdad.read().then(function (data) {
             cb.call(this, data);
         }, e => {
-            this.failedToInit(); 
+            //this.failedToInit();
+            fail.call(this);
         });
     }
 

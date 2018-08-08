@@ -1,5 +1,6 @@
 import { StatModel } from './components/stat';
 import { EditBlockModel } from './components/editblock';
+import { createBrowserHistory } from 'history';
 import uuidv4 from 'uuid/v4';
 import { type } from 'os';
 class Scope {
@@ -23,6 +24,8 @@ class Scope {
         this.icons = {
 
         };
+
+        this.history = createBrowserHistory();
     }
 
     getData(key) {
