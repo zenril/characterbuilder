@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { GoogleLogin, GoogleLogout  } from 'react-google-login';
 import config from "../../../_config.js";
 
-        
+
 
 export class Login extends React.Component
 {
@@ -24,7 +24,6 @@ export class Login extends React.Component
 
     componentDidMount()
     {
-        
     }
 
     handleLogin(r) {

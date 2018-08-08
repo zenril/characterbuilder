@@ -25,11 +25,6 @@ class App extends React.Component
 
     componentDidMount()
     {
-        // settings.load(function(data){
-        //     scope.history.push('/character');
-        // }, function(){
-        //     scope.history.push('/login');
-        // });
     }
 
     render()
